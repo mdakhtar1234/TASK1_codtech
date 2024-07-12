@@ -1,0 +1,876 @@
+/* .................Create color varible...................*/
+:root {
+
+  --green: green;
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0 .1rem 1rem rgba(0, 0, 0.1);
+
+  /*--box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0,.1);*/
+  --border: .2rem solid rgba(0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0.1);
+}
+
+/* ...........universal selector.............*/
+* {
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+/*.............font-size.................*/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+/*................body-color.............*/
+body {
+  background: #eee;
+}
+
+
+/*..............heading staring..................*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+}
+
+/*....................for-logo...........*/
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+/*....................for-logo..icons.........*/
+.header .logo i {
+  color: green;
+}
+
+/*....................for-navbar.ankar tag..........*/
+.navbar a {
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  /*top-buttom-0 || left-right*/
+  color: var(--black);
+
+}
+
+.navbar a:hover {
+  color: var(--green);
+}
+
+/*....................icons-div...........*/
+.icons div {
+  border: 0px solid;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: 1rem;
+  background: #eee;
+  color: var(--black);
+  font-size: 2rem;
+  margin-right: 0.3rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icons div:hover {
+  background: var(--green);
+  color: white;
+}
+
+/*....................search-form...........*/
+.search-form {
+  border: 0px solid;
+  position: absolute;
+  right: -110%;
+  /* 2rem // -110%*/
+  top: 110%;
+  width: 30rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+/*....................search-input...........*/
+.search-form input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 2rem;
+  color: var(--black);
+  padding: 0 2rem;
+  /*top-buttom-0 ||left-right */
+}
+
+/*....................search-label...........*/
+.search-form label {
+  font-size: 2.2rem;
+  padding-right: 1.4rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.search-form label:hover {
+  color: var(--green);
+}
+
+/*....................toggle...........*/
+.search-form.active {
+  right: 2rem;
+  transition: .1s linear;
+
+}
+
+/*....................shopping-cart...........*/
+.shopping-cart {
+  border: 0px solid;
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  /*real value:2rem* -110%/
+  /*with:30rem*/
+  padding: 1rem;
+  /* top-buttom || left-right-0*/
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  background: #fff;
+
+}
+
+/*....................toggle...........*/
+.shopping-cart.active {
+  right: 2rem;
+  transition: .1s linear;
+}
+
+/*....................shopping-cart-box...........*/
+.shopping-cart .box {
+  border: 0px solid blue;
+  gap: 1rem;
+  position: relative;
+  margin: 1rem 0;
+  /*top-buttom ||left-right-0*/
+
+}
+
+/*....................shopping-cart-box.icons..........*/
+.shopping-cart .box i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+.shopping-cart .box i :hover {
+  color: var(--green);
+}
+
+/*....................box-heading...........*/
+.shopping-cart .box .content h3 {
+  color: var(--black);
+  font-size: 1.7rem;
+  text-align: center;
+
+}
+
+/*....................price...........*/
+.shopping-cart .box .content .price {
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+/*....................quantity...........*/
+.shopping-cart .box .content .price .quantity {
+  padding-left: 2rem;
+}
+
+/*....................total-price...........*/
+.total {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  /*top-buttom || left-right-0*/
+  text-align: center;
+  color: var(--black);
+}
+
+
+/*....................logi-form...........*/
+.login-form {
+  border: 0px solid;
+  position: absolute;
+  width: 40rem;
+  top: 110%;
+  right: -110%;
+  /*2rem*/
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  /*top-buttom || left-right-0*/
+  border-radius: .5rem;
+  background: #fff;
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;
+  margin: .7rem;
+  /* top-buttom ||left-right-0*/
+  background: #eee;
+  border-radius: .5rem;
+  padding: 1rem;
+  /*top-buttom ||left-right-0*/
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+}
+
+/*....................toggle...........*/
+.login-form.active {
+  right: 2rem;
+  transition: .2s linear;
+}
+
+/*....................heading...........*/
+.login-form h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+/*....................paragraph...........*/
+.login-form p {
+  border: 0px solid;
+  font-size: 1.5rem;
+  padding: .6rem 0;
+  /*top-buttom || left-right-0*/
+  color: var(--light-color);
+}
+
+/*....................anker-tag...........*/
+.login-form a {
+  color: var(--green);
+  text-decoration: underline;
+
+}
+
+/*....................button...........*/
+.btn {
+  border: 2px solid black;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .8rem 3rem;
+  /* top-buttom || left-right*/
+  font-size: 1.7rem;
+  width: 18rem;
+  border-radius: .5rem;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  background: rgba(66, 67, 66, 0.704);
+}
+
+.btn:hover {
+  color: white;
+  background: var(--green);
+}
+
+/*.........button............*/
+#menu-btn {
+  display: none;
+}
+
+/*.........toggle............*/
+.navbar.active {
+  right: 2rem;
+  transition: .2s linear;
+}
+
+/*....................heading-end...........*/
+
+/* section of area*/
+section {
+  padding: 2rem 9%;
+  /*top-buttom || left-right-9%*/
+}
+
+/*< !-- .............banner section...........-->*/
+.home {
+  border: 0px solid;
+  display: flex;
+  justify-content: center;
+  background: url(./images/vegitable.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 19rem 0;
+  /*top-buttom || left-right*/
+
+}
+
+
+/*.........home ka contents............*/
+.home .content-home {
+  text-align: center;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  padding-bottom: 2rem;
+  border-radius: .5rem;
+  color: var(--black);
+}
+
+/*.........home ka span............*/
+.home .content-home span {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: var(--green);
+}
+
+/*.........home ka paragraph............*/
+.home .content-home p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  /*top-buttom || left-right-0*/
+  line-height: 1.8;
+  margin: 0 4rem;
+  /*top-buttom-0 || left-right*/
+}
+
+/*.........home ka heading............*/
+.home .content-home h3 {
+  color: var(--black);
+  font-size: 3rem;
+}
+
+/*............page ka logo design...common-line...used to.....*/
+.heading {
+  text-align: center;
+  padding: 2rem 0;
+  /*top-buttom || left-right-0*/
+  padding-bottom: 3rem;
+  font-size: 3rem;
+  color: var(--black);
+}
+
+.heading span {
+  font-size: 3rem;
+  font-weight: bold;
+  background: var(--green);
+  color: #fff;
+  display: inline-block;
+  padding: .5rem 3rem;
+  /*top-buttom || left-right-3*/
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+
+}
+
+/*.....................page ka logo design...................*/
+
+/* .................Features...............*/
+.features .box-container {
+  border: 0px solid blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+
+}
+
+/* .................box...............*/
+.features .box-container .box-1 {
+  border: 0px solid red;
+  padding: 2rem 2rem;
+  background: #fff;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.features .box-container .box-1:hover {
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+/* .................h3...............*/
+.features .box-container .box-1 h3 {
+  font-size: 2.2rem;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+/* .................p...............*/
+.features .box-container .box-1 p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--light-color);
+  padding-bottom: 1rem;
+}
+
+/* .................box-images-control...............*/
+.image-control {
+  width: 100%;
+  height: 20rem;
+
+}
+
+
+/* ................product css........................*/
+
+.products .product-slider {
+  border: 0px solid;
+  padding: 2rem;
+  /* top-buttom||left-right*/
+
+}
+
+.products .product-slider :first-child {
+  margin-bottom: 1rem;
+}
+
+/* .................box...............*/
+.products .product-slider .box {
+  border: 0px solid;
+  background: #fff;
+  border-radius: .5rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  outline-offset: -1rem;
+  outline: var(--outline);
+  box-shadow: var(--box-shadow);
+
+}
+
+.products .product-slider .box:hover {
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+/* .................box-image...............*/
+.products .product-slider .box img {
+  height: 20rem;
+}
+
+/* .................h...............*/
+.products .product-slider .box h1 {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+/* .................price...............*/
+.products .product-slider .box .price {
+  font-size: 2rem;
+  color: var(--light-color);
+  padding: .5rem 0;
+}
+
+/* product css*/
+
+
+/*...................... categories.................*/
+.categories .box-container {
+  border: 0px solid blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+
+}
+
+.categories .box-container .box {
+  border: 0px solid red;
+  padding: 2rem 2rem;
+  background: #fff;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.categories .box-container .box:hover {
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+.categories .box-container .box h3 {
+  font-size: 2.2rem;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+.categories .box-container .box p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--light-color);
+  padding-bottom: 1rem 0;
+}
+
+/* categories end*/
+
+/* ....................Review code....................*/
+.review .review-slider {
+  border: 0px solid;
+  padding: 1.2rem;
+  /* top-buttom || left-right*/
+  border: 0px solid blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+
+}
+
+.review .review-slider .box {
+  border: 0px solid red;
+  padding: 2rem 2rem;
+  /* top-buttom-2 || left-right-2*/
+  background: #fff;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.review .review-slider .box:hover {
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+.review .review-slider .box h3 {
+  font-size: 2.2rem;
+  padding-bottom: 1.5rem;
+  color: var(--black);
+}
+
+.review .review-slider .box p {
+  padding: 1rem;
+  line-height: 1.8;
+  color: var(--light-color);
+  font-size: 1.5rem;
+}
+
+.review .review-slider .box .stars i {
+  color: orange;
+  font-size: 2rem;
+}
+
+.review .review-slider .box img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+/* Review code end*/
+
+
+
+
+
+.blogs-image-control {
+  width: 100%;
+  height: 20rem;
+}
+
+/* blogs code css*/
+
+
+.blogs .box-container {
+  border: 0px solid blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 1.5rem;
+
+}
+
+.blogs .box-container .box {
+  padding: 2rem 2rem;
+  /*top-buttom-2 || left-right-2*/
+  background: #fff;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+
+}
+
+.blogs .box-container .box:hover {
+  box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+.blogs .box-container .box img {
+  height: 25rem;
+  width: 100%;
+
+}
+
+.blogs .box-container .box .content {
+  padding: 2rem;
+  /* top-buttom || left-right*/
+  border: 1px solid;
+  font-size: 1.5rem;
+}
+
+.blogs .box-container .box .content .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: .2rem;
+  border-bottom: var(--border);
+}
+
+.blogs .box-container .box .content .icons a {
+  color: var(--light-color);
+  font-size: 1.8rem;
+
+
+
+}
+
+.blogs .box-container .box .content .icons a:hover {
+  color: var(--black);
+}
+
+.blogs .box-container .box .content .icons a i {
+  color: green;
+  padding-right: .5rem;
+
+}
+
+.blogs .box-container .box .content h3 {
+  line-height: 1.8;
+  color: var(--black);
+  font-size: 2rem;
+  padding: .5rem 0;
+}
+
+.blogs .box-container .box .content p {
+  line-height: 1.8;
+  color: var(--light-color);
+
+}
+
+/*blogs code end css*/
+
+
+
+/* footer-icons-controls*/
+.icons-control {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+/* footer-icons-controls*/
+
+/* Atm-card-controls */
+.Atm-card-controls {
+  width: 20rem;
+  height: 10rem;
+}
+
+/* Atm-card-controls*/
+
+/*....................footer css...................*/
+
+
+
+
+.footer {
+  background: #eee;
+}
+
+.footer .box-container {
+  border: 0px solid blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 1.5rem;
+
+}
+
+.footer .box-container .footer-box {
+  background: #fff;
+}
+
+.footer-box {
+  width: 100%;
+  margin: .7rem;
+  /*top-buttom || left-right*/
+  background: #eee;
+  border-radius: .5rem;
+  padding: 1rem;
+  /*top-buttom || left-right*/
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+}
+
+.footer .box-container .footer-box h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  padding: 1rem;
+  /*top-buttom || left-right*/
+}
+
+.footer .box-container .footer-box h3 i {
+  color: var(--green);
+
+}
+
+.footer .box-container .footer-box .links {
+  font-size: 1.5rem;
+  display: block;
+  color: var(--light-color);
+  padding: 1rem 0;
+  /*top-buttom || left-right*/
+}
+
+.footer .box-container .footer-box .links i {
+  color: var(--green);
+  padding-right: .5rem;
+}
+
+.footer .box-container .footer-box .links:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box-container .footer-box p {
+  line-height: 1.8;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  /*top-buttom || left-right*/
+}
+
+.footer .box-container .footer-box .share img {
+  height: 4rem;
+  width: 4rem;
+  border: 0px solid;
+  border-radius: .5rem;
+  font-size: 2rem;
+  margin-left: .2rem;
+  color: var(--black);
+  background: #fff;
+  text-align: center;
+}
+
+.footer .box-container .footer-box .share img:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+.footer .box-container .footer-box .email {
+
+  margin: .7rem 0;
+  /*top-buttom || left-right*/
+  padding: 1rem;
+  /*top-buttom || left-right*/
+  border-radius: .5rem;
+  background: #eee;
+}
+
+.footer .box-container .footer-box .Atm-card-controls {
+  margin-top: 2rem;
+  height: 15rem;
+}
+
+.credit {
+  background-color: #130f40;
+
+}
+
+.footer .credit {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  color: var(--black);
+  font-size: 2rem;
+  border-top: var(--border);
+  color: white;
+  border-radius: .5rem;
+
+}
+
+.footer .credit span {
+  color: var(--green);
+  font-size: 2.5rem;
+}
+
+/*footer end css*/
+
+
+
+
+
+
+
+/*@media queires*/
+
+@media(max-width:991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+    /*top-buttom || left-right*/
+  }
+
+  section {
+    padding: 2rem;
+    /*top-buttom || left-right*/
+  }
+
+}
+
+@media(max-width:768px) {
+
+  #menu-btn {
+    display: inline-block;
+    /*none*/
+  }
+
+
+  .navbar {
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    /*2rem*/
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background: #fff;
+
+  }
+
+  .navbar a {
+    font-size: 2rem;
+    margin: 2rem 2.5rem;
+    /*top-buttom || left-right*/
+    display: block;
+  }
+}
+
+@media(max-width:450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  .heading span {
+    font-size: 2.5rem;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
